@@ -1,7 +1,7 @@
 # Dev/build image. Use `docker compose up` for local dev with hot reload,
 # or `docker build --target build -o dist .` to produce a static dist/ folder.
 
-FROM node:20-alpine AS base
+FROM node:26-alpine AS base
 WORKDIR /app
 COPY package.json package-lock.json* ./
 RUN npm install
